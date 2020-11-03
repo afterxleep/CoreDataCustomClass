@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="CrewMessage" representedClassName="CrewMessage" syncable="YES" codeGenerationType="class">
-        <attribute name="highlighted" optional="YES" attributeType="Transformable" customClassName="[String]" syncable="YES"/>
-        <attribute name="highlightedRanges" optional="YES" attributeType="Transformable" customClassName="[NSRange]" syncable="YES"/>
-        <attribute name="range" optional="YES" attributeType="Transformable" customClassName="Ranges" syncable="YES"/>
+        <attribute name="highlighted" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="[String]"/>
+        <attribute name="highlightedRanges" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="[NSRange]"/>
+        <attribute name="range" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="Ranges"/>
     </entity>
     <elements>
-        <element name="CrewMessage" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="CrewMessage" positionX="-63" positionY="-18" width="128" height="88"/>
     </elements>
 </model>

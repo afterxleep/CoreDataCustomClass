@@ -8,7 +8,8 @@
 
 import Foundation
 
-public class Ranges: NSObject, NSCoding {
+public class Ranges: NSObject, NSSecureCoding {
+    public static var supportsSecureCoding: Bool = true
     
     public var ranges: [Range] = []
     
@@ -24,9 +25,8 @@ public class Ranges: NSObject, NSCoding {
         aCoder.encode(ranges, forKey: Key.ranges.rawValue)
     }
     
-    public required convenience init?(coder aDecoder: NSCoder) {
-        let mRanges = aDecoder.decodeObject(forKey: Key.ranges.rawValue) as! [Range]
-        
+    public required convenience init?(coder aDecoder: NSCoder) {        
+        let mRanges = aDecoder.decodeObject(of: NSArray.self, forKey: Key.ranges.rawValue) as! [Range]
         self.init(ranges: mRanges)
     }
     
